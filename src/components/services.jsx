@@ -4,26 +4,24 @@ export const Services = (props) => {
   return (
     <div id="services" className="text-center">
       <div className="container">
-        <div className="section-title">
-          <h2>Our Services</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed
-            dapibus leonec.
-          </p>
+        <div className="col-md-10 col-md-offset-1 section-title">
+          <h2>Services</h2>
         </div>
         <div className="row">
           {props.data
             ? props.data.map((d, i) => (
-                <div key={`${d.name}-${i}`} className="col-md-4">
+                <div key={`${d.title}-${i}`} className="col-xs-6 col-md-4" style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center'
+                }}>
                   {" "}
                   <i className={d.icon}></i>
-                  <div className="service-desc">
-                    <h3>{d.name}</h3>
-                    <p>{d.text}</p>
-                  </div>
+                  <h3>{d.title}</h3>
+                  <p style={{ width: '80%' }}>{d.text}</p>
                 </div>
               ))
-            : "loading"}
+            : "Loading..."}
         </div>
       </div>
     </div>

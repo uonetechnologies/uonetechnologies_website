@@ -1,10 +1,10 @@
 @media screen and (max-width: 400px) {
-  #features {
+  #services {
     padding: 20px;
     width: 111%;
   }
   #about,
-  #services,
+  #technologies,
   #testimonials,
   #team,
   #contact,
